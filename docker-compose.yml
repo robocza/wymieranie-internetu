@@ -1,0 +1,14 @@
+services:
+  node:
+    container_name: wymieranie-www-node
+    build:
+      context: .docker/node
+    ports:
+      - '80:80'
+      - '3000:3000'
+      - '4321:4321'
+    volumes:
+      - ./:/app
+    stdin_open: true
+    tty: true
+    command: tail -f /dev/null

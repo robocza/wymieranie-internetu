@@ -7,15 +7,39 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="pl">
+<html lang="pl" class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Wymieranie internetu - polskie tłumaczenie eseju Extinction Internet autorstwa Geerta Lovinka" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
+
+		<style is:global>
+			@font-face {
+				font-family: 'Karrik';
+				src: url('/fonts/karrik/Karrik-Regular.ttf') format('truetype');
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'TerminalGrotesque';
+				src: url('/fonts/terminal-grotesque/terminal-grotesque.ttf') format('truetype');
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: 'TerminalGrotesqueOpen';
+				src: url('/fonts/terminal-grotesque/terminal-grotesque_open.otf') format('truetype');
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+		</style>
 	</head>
-	<body class="relative w-full min-w-[320px]">
+	<body class="relative w-full min-w-[320px] bg-light dark:bg-dark text-black dark:text-white">
 		<slot />
 	</body>
 </html>

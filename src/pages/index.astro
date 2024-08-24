@@ -1,12 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Central from "../layouts/elements/arrangement/Central.astro";
+
+import {Content as Text} from '../data/text.md';
 ---
 
 <Layout title="Wymieranie internetu">
-	<main class="h-screen">
-		<Central>
-			<h1 class="text-6xl">❤🪶</h1>
-		</Central>
-	</main>
+	<!--<main class="h-screen">-->
+	<!--	<Central>-->
+	<!--		<h1 class="text-6xl">❤🪶</h1>-->
+	<!--	</Central>-->
+	<!--</main>-->
+	<article class="container mx-auto prose">
+		<Text />
+	</article>
 </Layout>

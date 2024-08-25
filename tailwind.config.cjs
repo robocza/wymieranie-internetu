@@ -7,6 +7,13 @@ module.exports = {
     ],
     theme: {
         extend: {
+            boxShadow: {
+                image: 'inset 0px 0px 10px 10px #0000',
+            },
+            boxShadowColor: ({ theme }) => ({
+                light: theme('colors.light'),
+                dark: theme('colors.dark'),
+            }),
             colors: {
                 white: '#FFFFFF', // dark mode text
                 black: '#242424', // light mode text

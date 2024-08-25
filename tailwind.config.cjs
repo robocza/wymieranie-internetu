@@ -29,7 +29,7 @@ module.exports = {
             fontSize: {
                 '4xl': '2.5rem',
                 '10xl': ['8rem', '8rem'],
-                '16xl': ['12.5rem', '12.5rem'],
+                '16xl': ['11rem', '11rem'],
             },
             typography: {
                 DEFAULT: {

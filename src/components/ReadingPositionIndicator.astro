@@ -1,0 +1,23 @@
+<span>
+    <span data-position-indicator-value>0%</span> tekstu
+</span>
+
+<script>
+    // @ts-ignore
+    import { createPositionIndicator } from 'position-indicator';
+    // @ts-ignore
+    import type { CallbackParams } from 'position-indicator';
+
+    let onPositionUpdate = (data: CallbackParams) => {
+        document.querySelectorAll('[data-position-indicator-value]').forEach((element) => {
+            element.textContent = data.position.toLocaleString(undefined, {style: 'percent'});
+        });
+    }
+
+    let positionIndicator = createPositionIndicator({
+        onInit: onPositionUpdate,
+        onUpdate: onPositionUpdate,
+    })
+
+    positionIndicator.init();
+</script>

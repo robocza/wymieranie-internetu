@@ -2,7 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Central from "../layouts/elements/arrangement/Central.astro";
 
-import {Content as Text} from '../data/text.md';
+import {Content} from '../data/text.md';
+
 ---
 
 <Layout title="Wymieranie internetu">
@@ -16,6 +17,6 @@ import {Content as Text} from '../data/text.md';
 		</Central>
 	</main>
 	<article class="container mx-auto prose dark:prose-invert font-serif text-2xl">
-		<Text />
+		<Content />
 	</article>
 </Layout>

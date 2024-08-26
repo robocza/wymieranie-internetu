@@ -1,0 +1,15 @@
+---
+
+interface Props {
+    content: string,
+}
+
+const {
+    content= await Astro.slots.render('content'),
+} = Astro.props;
+
+---
+
+<blockquote class="text-2xl lg:text-5xl font-sans uppercase">
+    <fragment set:html={content} />
+</blockquote>

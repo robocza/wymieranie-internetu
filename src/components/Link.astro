@@ -5,6 +5,10 @@ interface Props {
     className?: string
 }
 
-const {url, text, className = "font-sans text-lg font-normal text-white opacity-70 underline hover:opacity-90 pl-6 relative before:absolute before:left-0 before:no-underline before:content-['🔗']"} = Astro.props;
+const {
+    url,
+    text,
+    className = "font-sans text-lg font-normal text-white opacity-70 underline hover:opacity-90 pl-6 relative before:absolute before:-left-1 before:no-underline before:content-['🔗']"
+} = Astro.props;
 ---
 <a class={className} href={url}>{text}</a>

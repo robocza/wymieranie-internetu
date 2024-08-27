@@ -1,14 +1,14 @@
 ---
 import Central from "../layouts/elements/arrangement/Central.astro";
-import Link from "./Link.astro";
 import Title from "./Title.astro";
+import SimpleLink from "./SimpleLink.astro";
 ---
 <section class="h-screen">
     <Central>
-        <address class="font-sans text-2xl sm:text-3xl lg:text-4xl 2xl:text-6xl not-italic mb-8 2xl:mb-16 uppercase">Geert Lovink</address>
+        <address class="font-sans text-2xl sm:text-3xl lg:text-4xl 2xl:text-6xl not-italic mt-2 lg:mt-8 2xl:mt-16 mb-4 2xl:mb-8 uppercase">Geert Lovink</address>
         <h1 class="text-5xl sm:text-8xl lg:text-10xl 2xl:text-16xl uppercase font-pixel"><Title/></h1>
         <div class="mt-4 2xl:mt-8">
-            <Link text="czytaj online" url="#wymieranie-internetu" icon=null extraClassName="opacity-100 text-lg lg:text-2xl 2xl:text-3xl" />
+            <SimpleLink text="czytaj online" url="#wymieranie-internetu" extraClassName="text-lg lg:text-2xl 2xl:text-3xl" />
         </div>
     </Central>
 </section>

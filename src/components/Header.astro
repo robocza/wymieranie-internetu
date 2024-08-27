@@ -2,29 +2,43 @@
 import LogoMVU from "../components/LogoMVU.astro";
 import LogoGR from "../components/LogoGR.astro";
 import ReadingPositionIndicator from "../components/ReadingPositionIndicator.astro";
-import Central from "../layouts/elements/arrangement/Central.astro";
+import SimpleLink from "./SimpleLink.astro";
 ---
-<header class="top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/10 transition-[opacity] ease-in-out fixed">
+
+<nav class="transition-transform duration-300 ease-in-out top-0 z-40 flex-none mx-auto w-full border-b border-dark dark:border-light fixed h-20">
     <div class="absolute inset-0 bg-light dark:bg-dark opacity-90"></div>
-    <div class="relative py-5 mx-auto w-full">
-        <div class="grid grid-cols-3 px-4">
-            <div class="flex items-center justify-start gap-8">
-                <a target="_blank" href="https://grupa.robocza.org/">
-                    <Central>
-                        <LogoGR />
-                    </Central>
-                </a>
-                <a class="flex items-center" target="_blank" href="https://mvu.pl/">
-                    <Central>
-                        <LogoMVU />
-                    </Central>
-                </a>
-            </div>
-            <div class="flex items-center justify-center gap-8">
+    <div class="relative mx-auto w-full">
+        <div class="grid grid-cols-3 px-4 h-20">
+            <div class="flex items-center justify-start gap-x-8">
 
             </div>
-            <div class="flex items-center justify-end gap-8">
+            <div class="flex items-center justify-center gap-x-8">
+
+            </div>
+            <div class="flex items-center justify-end gap-x-8">
                 <ReadingPositionIndicator />
+            </div>
+        </div>
+    </div>
+</nav>
+
+<header class="transition-transform duration-300 ease-in-out top-0 z-50 flex-none mx-auto w-full border-b border-dark dark:border-light fixed">
+    <div class="absolute inset-0 bg-light dark:bg-dark"></div>
+    <div class="relative mx-auto w-full">
+        <div class="grid grid-cols-3 px-4 h-20">
+            <div class="flex items-center justify-start gap-x-8">
+                <SimpleLink text="O książce" url="/o-ksiazce" extraClassName="uppercase" />
+            </div>
+            <div class="flex items-center justify-center gap-x-8">
+                <SimpleLink text="O książce" url="/o-ksiazce" extraClassName="uppercase" />
+            </div>
+            <div class="flex items-center justify-end gap-x-8">
+                <a class="flex items-center" target="_blank" href="https://mvu.pl/">
+                    <LogoMVU />
+                </a>
+                <a target="_blank" href="https://grupa.robocza.org/">
+                    <LogoGR />
+                </a>
             </div>
         </div>
     </div>

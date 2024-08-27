@@ -3,6 +3,7 @@ import LogoMVU from "../components/LogoMVU.astro";
 import LogoGR from "../components/LogoGR.astro";
 import ReadingPositionIndicator from "../components/ReadingPositionIndicator.astro";
 import SimpleLink from "./SimpleLink.astro";
+import ThemeSelect from "./ThemeSelect.astro";
 ---
 
 <nav class="transition-transform duration-300 ease-in-out top-0 z-40 flex-none mx-auto w-full border-b border-dark dark:border-light fixed h-20">
@@ -30,7 +31,7 @@ import SimpleLink from "./SimpleLink.astro";
                 <SimpleLink text="O książce" url="/o-ksiazce" extraClassName="uppercase" />
             </div>
             <div class="flex items-center justify-center gap-x-8">
-                <SimpleLink text="O książce" url="/o-ksiazce" extraClassName="uppercase" />
+                <ThemeSelect/>
             </div>
             <div class="flex items-center justify-end gap-x-8">
                 <a class="flex items-center" target="_blank" href="https://mvu.pl/">

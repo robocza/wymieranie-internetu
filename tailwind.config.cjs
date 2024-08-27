@@ -18,7 +18,7 @@ module.exports = {
                 white: '#FFFFFF', // dark mode text
                 black: '#242424', // light mode text
                 light: '#F4F4F4', // light mode bg
-                dark: '#3A3A3A', // dark mode bg
+                dark: '#242424', // dark mode bg
             },
             fontFamily: {
                 sans: ['Karrik', ...defaultTheme.fontFamily.sans],

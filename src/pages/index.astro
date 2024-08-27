@@ -2,19 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import Central from "../layouts/elements/arrangement/Central.astro";
 import Article from "../components/Article.astro";
+import Cover from "../components/Cover.astro";
 ---
 
 <Layout title="Wymieranie internetu">
-	<main class="h-screen">
-		<Central>
-			<address class="font-sans text-2xl sm:text-3xl lg:text-4xl 2xl:text-6xl not-italic mb-8 2xl:mb-16 uppercase">Geert Lovink</address>
-			<h1 class="text-5xl sm:text-8xl lg:text-10xl 2xl:text-16xl uppercase font-pixel">
-				W<span class="font-pixel-open">ymie</span>ranie<br>
-				<span class="font-pixel-open">in</span>ter<span class="font-pixel-open">net</span>u
-			</h1>
-		</Central>
-	</main>
-	<article class="container w-full max-w-screen-xl mx-auto font-serif px-4">
+	<main>
+		<Cover/>
 		<Article/>
-	</article>
+	</main>
 </Layout>

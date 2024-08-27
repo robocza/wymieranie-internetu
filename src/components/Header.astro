@@ -3,29 +3,8 @@ import LogoMVU from "../components/LogoMVU.astro";
 import LogoGR from "../components/LogoGR.astro";
 import ReadingPositionIndicator from "../components/ReadingPositionIndicator.astro";
 import Central from "../layouts/elements/arrangement/Central.astro";
-
-interface Link {
-    text?: string;
-    href?: string;
-    ariaLabel?: string;
-    icon?: string;
-}
-
-interface MenuLink extends Link {
-    links?: Array<MenuLink>;
-}
-
-export interface Props {
-    id?: string;
-    links?: Array<MenuLink>;
-    isSticky?: boolean;
-    isDark?: boolean;
-    isFullWidth?: boolean;
-    position?: string;
-}
-
 ---
-<header class="top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out fixed">
+<header class="top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/10 transition-[opacity] ease-in-out fixed">
     <div class="absolute inset-0 bg-light dark:bg-dark opacity-90"></div>
     <div class="relative py-5 mx-auto w-full">
         <div class="grid grid-cols-3 px-4">

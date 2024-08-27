@@ -24,7 +24,7 @@ const {
     <div class:list={[
         'relative',
         'peer/image',
-        { 'hover:blur': translation },
+        { 'hover:blur hover:opacity-60': translation },
     ]}>
         <div class="absolute inset-0 shadow-image shadow-dark z-20"></div>
         <Image src={image}
@@ -34,7 +34,7 @@ const {
     </div>
     {
         source && (
-            <div class="text-right peer-hover/image:invisible">
+            <div class="mx-2 text-right peer-hover/image:invisible">
                 <Link text="źródło" url={source} />
             </div>
         )

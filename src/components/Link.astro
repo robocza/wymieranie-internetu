@@ -8,7 +8,20 @@ interface Props {
 const {
     url,
     text,
-    className = "font-sans text-lg font-normal text-white opacity-70 underline hover:opacity-90 pl-6 relative before:absolute before:-left-1 before:no-underline before:content-['🔗']"
+    className = "font-sans text-lg font-normal text-white opacity-70 underline underline-offset-4 hover:opacity-90 pl-6 relative",
+    extraClassName = '',
+    icon = '🔗',
 } = Astro.props;
+
+let classes;
+if(icon){
+    classes = className + ' before:absolute before:-left-1 before:no-underline before:content-[\'' + icon + '\']'
+} else {
+    classes = className;
+}
+
 ---
-<a class={className} href={url}>{text}</a>
+<a class:list={[
+    classes,
+    extraClassName,
+]} href={url}>{text}</a>

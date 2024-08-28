@@ -85,11 +85,11 @@ const { title } = Astro.props;
 				window.addEventListener('scroll', () => {
 					let currentScroll = window.scrollY;
 					if (currentScroll - lastScroll > 0) {
-						if (!header.classList.contains('-translate-y-full')){
-							header.classList.add('-translate-y-full');
+						if (!header.classList.contains('lg:-translate-y-full')){
+							header.classList.add('lg:-translate-y-full');
 						}
 					} else {
-						header.classList.remove('-translate-y-full');
+						header.classList.remove('lg:-translate-y-full');
 					}
 					lastScroll = currentScroll;
 				})

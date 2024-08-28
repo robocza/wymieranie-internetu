@@ -4,14 +4,14 @@ import Sun from '../assets/icons/sun.png';
 import Moon from '../assets/icons/moon.png';
 ---
 
-<button id="themeToggle" class="font-sans text-lg font-normal text-black dark:text-white hover:opacity-70 uppercase">
+<button id="themeToggle" class="font-sans text-sm sm:text-base lg:text-lg font-normal text-black dark:text-white hover:opacity-70 uppercase">
     <Image src={Moon}
            alt="Moon"
-           class="h-8 w-8 mr-1 inline-block dark:hidden"/>
-    <span class="inline dark:hidden underline underline-offset-4 ">Fuck the Sun</span>
+           class="h-3 w-3 sm:h-4 sm:w-4 lg:h-8 lg:w-8 sm:mr-1 inline-block dark:hidden align-middle"/>
+    <span class="inline dark:hidden underline underline-offset-2 lg:underline-offset-4">Fuck the Sun</span>
 
     <Image src={Sun}
            alt="Sun"
-           class="h-8 w-8 mr-1 hidden dark:inline-block"/>
-    <span class="hidden dark:inline underline underline-offset-4 ">Fuck the Moon</span>
+           class="h-3 w-3 sm:h-4 sm:w-4 lg:h-8 lg:w-8 sm:mr-1 hidden dark:inline-block align-middle"/>
+    <span class="hidden dark:inline underline underline-offset-2 lg:underline-offset-4">Fuck the Moon</span>
 </button>

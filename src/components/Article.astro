@@ -2,7 +2,14 @@
 import ArticleImage from "./ArticleImage.astro";
 import ArticleBlockquote from "./ArticleBlockquote.astro";
 
-import {Content} from '../data/text.md';
+// import {Content} from '../data/text.md';
+
+import * as text from '../data/text.md';
+
+let compiledText = text.compiledContent().replaceAll(
+    /(\s[a-ząćęłńóśźż]+)(o)([a-ząćęłńóśźż]+[\w.])/gu,
+    "$1<span class='relative' data-text-extinction><span data-text-extinction-victim>$2</span><span data-text-extinction-zombie class='absolute top-0 left-1/2 -translate-x-2/4 grayscale opacity-0'>🫥</span></span>$3"
+)
 
 import Image1 from '../assets/image1.png';
 import Image2 from '../assets/image2.png';
@@ -12,7 +19,7 @@ import Image2 from '../assets/image2.png';
 <article id="wymieranie-internetu" class="container w-full max-w-screen-xl mx-auto font-serif py-8 lg:py-16 px-4 relative scroll-mt-[76px]">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-32">
         <div class="lg:col-span-2 prose dark:prose-invert text-xl lg:text-2xl">
-            <Content />
+            <Fragment set:html={compiledText} />
         </div>
         <div class="flex flex-col items-center lg:items-end gap-2 lg:gap-8">
             <ArticleImage image={Image1} alt="alt" source="source"/>
@@ -48,3 +55,45 @@ import Image2 from '../assets/image2.png';
     </div>
 </article>
 
+<script>
+    const observer = new IntersectionObserver(
+        ((entries) => {
+            console.log(entries)
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    let victim = entry.target.querySelector('[data-text-extinction-victim]');
+                    if(victim) {
+                        victim.classList.add('animate-fade-out');
+                    }
+
+                    let zombie = entry.target.querySelector('[data-text-extinction-zombie]');
+                    if(zombie) {
+                        zombie.classList.add('animate-fade-in');
+                    }
+
+                    return;
+                }
+
+                let victim = entry.target.querySelector('[data-text-extinction-victim]');
+                if(victim) {
+                    victim.classList.remove('animate-fade-out');
+                }
+
+                let zombie = entry.target.querySelector('[data-text-extinction-zombie]');
+                if(zombie) {
+                    zombie.classList.remove('animate-fade-in');
+                }
+            });
+        }),
+        {
+            rootMargin: '0px',
+            threshold: 0.5
+        }
+    );
+
+    document.querySelectorAll('[data-text-extinction]').forEach((element) => {
+        if (element) {
+            observer.observe(element);
+        }
+    });
+</script>

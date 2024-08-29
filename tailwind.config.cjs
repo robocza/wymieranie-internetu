@@ -7,6 +7,10 @@ module.exports = {
     ],
     theme: {
         extend: {
+            animation: {
+                'fade-in': 'fadeIn 60s ease-in-out forwards',
+                'fade-out': 'fadeOut 60s ease-in-out forwards',
+            },
             boxShadow: {
                 image: 'inset 0px 0px 10px 10px #0000',
             },
@@ -30,6 +34,16 @@ module.exports = {
                 '4xl': '2.5rem',
                 '10xl': ['8rem', '8rem'],
                 '16xl': ['11rem', '11rem'],
+            },
+            keyframes: {
+                fadeIn: {
+                    '0%': { opacity: 0 },
+                    '100%': { opacity: 1 },
+                },
+                fadeOut: {
+                    '0%': { opacity: 1 },
+                    '100%': { opacity: 0 },
+                },
             },
             typography: {
                 DEFAULT: {

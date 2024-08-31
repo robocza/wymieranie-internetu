@@ -104,7 +104,7 @@ import Image2 from '../assets/image2.png';
 </script>
 
 <script>
-    import tippy from 'tippy.js';
+    import tippy, {inlinePositioning} from 'tippy.js';
 
     document.querySelectorAll('[data-footnote-ref]').forEach((footnoteElement) => {
         let footnoteId = footnoteElement.getAttribute('href');
@@ -136,7 +136,9 @@ import Image2 from '../assets/image2.png';
             allowHTML: true,
             arrow: false,
             content: footnotePopoverContent.innerHTML,
-            placement: 'right-start',
+            placement: 'auto-start',
+            inlinePositioning: true,
+            plugins: [inlinePositioning],
             trigger: 'click',
             interactive: true,
             appendTo: () => document.body

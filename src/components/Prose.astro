@@ -1,0 +1,15 @@
+---
+
+const {
+    id = '',
+    extraClass,
+} = Astro.props;
+
+---
+
+<div {...id ? { id } : {}} class:list={[
+    'prose max-w-none dark:prose-invert text-xl lg:text-2xl prose-p:max-w-screen-sm prose-p:xl:max-w-screen-md',
+    extraClass
+]}>
+    <slot/>
+</div>

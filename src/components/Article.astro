@@ -1,150 +1,115 @@
 ---
-import ArticleImage from "./ArticleImage.astro";
 import ArticleBlockquote from "./ArticleBlockquote.astro";
+import Prose from "./Prose.astro";
 
 import {Content as PrefaceContent} from '../data/preface.md';
-
-import * as text from '../data/text.md';
-
-let compiledText = text.compiledContent().replaceAll(
-    /(\s[a-ząćęłńóśźż]+)(o)([a-ząćęłńóśźż]+[\w.])/gu,
-    "$1<span class='relative' data-text-extinction><span data-text-extinction-victim>$2</span><span data-text-extinction-zombie class='absolute select-none pointer-events-none top-0 left-1/2 -translate-x-2/4 grayscale opacity-0'>🫥</span></span>$3"
-)
-
-import Image1 from '../assets/image1.png';
-import Image2 from '../assets/image2.png';
+import {Content as TextContent} from '../data/text.mdx';
 
 ---
 
-<article id="wymieranie-internetu" class="container w-full max-w-screen-xl mx-auto font-serif py-8 lg:py-16 px-4 relative scroll-mt-[76px]">
+<article id="wymieranie-internetu" class="container w-full max-w-screen-md lg:max-w-screen-xl mx-auto font-serif py-8 lg:py-16 px-4 relative scroll-mt-[76px]">
     <div class="grid gap-8 lg:gap-32">
         <div>
-            <div class="prose dark:prose-invert font-sans opacity-70 text-sm lg:text-base uppercase mb-8 lg:mb-32">
+            <Prose extraClass="font-sans opacity-70 text-sm lg:text-base uppercase mb-8 lg:mb-32">
                 <PrefaceContent/>
-            </div>
-            <div class:list={[
-                'prose max-w-none dark:prose-invert text-xl lg:text-2xl',
-                'prose-blockquote:text-2xl prose-blockquote:lg:text-5xl prose-blockquote:font-sans prose-blockquote:uppercase prose-blockquote:not-italic prose-blockquote:[quotes:none] prose-blockquote:ps-0 prose-blockquote:border-0'
-            ]}>
-                <Fragment set:html={compiledText} />
-            </div>
-        </div>
-        <div class="flex flex-col items-center lg:items-end gap-2 lg:gap-8">
-            <ArticleImage image={Image1} alt="alt" source="source"/>
-            <ArticleImage
-                    image={Image2}
-                    alt="alt"
-                    source="source"
-            >
-                <Fragment slot="translation">
-                    are you asian or chinese?<br>
-                    im chines but chinese is a type asian so<br>
-                    you just came from china?<br>
-                    no i was born insf<br>
-                    si<br>
-                    dope dope
-                </Fragment>
-            </ArticleImage>
-        </div>
-        <div class="lg:col-span-3">
-            <ArticleBlockquote>
-                czym nie da się mówić o tym trzeba szlochać. Sappho Bot — Blackcap; uczyńmy ciemność znów widoczną — egalitaryzm dla ciebie, elityzm dla mnie
-                — potrzebuję przycisku odzobacz żeby usunąć z mózgu tweety, które ostatnio widziałem
-                . Ben Grosser — czy uważam siebie za osobę wpływową. nie. chcę zrozumieć
-                . Hannah Arendt — Jak to kurwa komputer będzie mnie pytał czy jestem robotem, ty zjebie sam jesteś robotem @briantheruller  — co da się zmierzyć, tym da się zarządzać. Simon Caulkin  — polecenie: przyślijcie klaunów
-                —
-                pamiętam zniszczenie
-                —
-                brechtowska maksyma: bierz przykład nie ze starych, dobrych rzeczy tylko z nowych, złych
-                —
-                już nie chodzi o socjalizm albo barbarzyństwo ale o dewzrost albo mad-max. Patrice Riemens
-            </ArticleBlockquote>
+            </Prose>
+            <Prose id="text">
+                <TextContent components={{blockquote: ArticleBlockquote }}/>
+            </Prose>
         </div>
     </div>
 </article>
 
 <script>
-    const observer = new IntersectionObserver(
-        ((entries) => {
-            console.log(entries)
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
+    import tippy, {inlinePositioning} from 'tippy.js';
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('#text > p').forEach((element) => {
+            if (element) {
+                element.innerHTML = element.innerHTML.replaceAll(
+                    /(\s[a-ząćęłńóśźż]+)(o)([a-ząćęłńóśźż]+[\w.])/gu,
+                    "$1<span class='relative' data-text-extinction><span data-text-extinction-victim>$2</span><span data-text-extinction-zombie class='absolute select-none pointer-events-none top-0 left-1/2 -translate-x-2/4 grayscale opacity-0'>🫥</span></span>$3"
+                );
+            }
+        });
+
+        document.querySelectorAll('[data-footnote-ref]').forEach((footnoteElement) => {
+            let footnoteId = footnoteElement.getAttribute('href');
+            if (footnoteId === null) {
+                return;
+            }
+
+            footnoteElement.addEventListener("click", function (event) {
+                event.preventDefault()
+            });
+
+            let footnoteContent = document.getElementById(footnoteId.slice(1));
+            if (footnoteContent === null) {
+                return;
+            }
+
+            let footnotePopoverContent = document.createElement('div');
+            let footnotePopoverContentInner = document.createElement('div');
+            footnotePopoverContentInner.innerHTML = footnoteContent.innerHTML;
+            footnotePopoverContentInner.className = 'prose bg-light dark:bg-dark font-sans prose dark:prose-invert text-black/70 dark:text-white/70 text-base lg:text-lg rounded-md border border-dark/70 dark:border-light/70 py-3.5 px-5';
+            footnotePopoverContent.innerHTML = footnotePopoverContentInner.outerHTML;
+
+            let footnotePopoverContentBackReference = footnotePopoverContent.querySelector('a[data-footnote-backref]');
+            if (footnotePopoverContentBackReference !== null) {
+                footnotePopoverContentBackReference.remove();
+            }
+
+            tippy('#' + footnoteElement.id, {
+                allowHTML: true,
+                arrow: false,
+                content: footnotePopoverContent.innerHTML,
+                placement: 'auto-start',
+                inlinePositioning: true,
+                plugins: [inlinePositioning],
+                trigger: 'click',
+                interactive: true,
+                appendTo: () => document.body
+            });
+        });
+
+        const observer = new IntersectionObserver(
+            ((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        let victim = entry.target.querySelector('[data-text-extinction-victim]');
+                        if(victim) {
+                            victim.classList.add('animate-fade-out');
+                        }
+
+                        let zombie = entry.target.querySelector('[data-text-extinction-zombie]');
+                        if(zombie) {
+                            zombie.classList.add('animate-fade-in');
+                        }
+
+                        return;
+                    }
+
                     let victim = entry.target.querySelector('[data-text-extinction-victim]');
                     if(victim) {
-                        victim.classList.add('animate-fade-out');
+                        victim.classList.remove('animate-fade-out');
                     }
 
                     let zombie = entry.target.querySelector('[data-text-extinction-zombie]');
                     if(zombie) {
-                        zombie.classList.add('animate-fade-in');
+                        zombie.classList.remove('animate-fade-in');
                     }
+                });
+            }),
+            {
+                rootMargin: '0px',
+                threshold: 0.5
+            }
+        );
 
-                    return;
-                }
-
-                let victim = entry.target.querySelector('[data-text-extinction-victim]');
-                if(victim) {
-                    victim.classList.remove('animate-fade-out');
-                }
-
-                let zombie = entry.target.querySelector('[data-text-extinction-zombie]');
-                if(zombie) {
-                    zombie.classList.remove('animate-fade-in');
-                }
-            });
-        }),
-        {
-            rootMargin: '0px',
-            threshold: 0.5
-        }
-    );
-
-    document.querySelectorAll('[data-text-extinction]').forEach((element) => {
-        if (element) {
-            observer.observe(element);
-        }
-    });
-</script>
-
-<script>
-    import tippy, {inlinePositioning} from 'tippy.js';
-
-    document.querySelectorAll('[data-footnote-ref]').forEach((footnoteElement) => {
-        let footnoteId = footnoteElement.getAttribute('href');
-        if(footnoteId === null){
-            return;
-        }
-
-        footnoteElement.addEventListener("click", function(event){
-            event.preventDefault()
-        });
-
-        let footnoteContent = document.getElementById(footnoteId.slice(1));
-        if(footnoteContent === null){
-            return;
-        }
-
-        let footnotePopoverContent = document.createElement('div');
-        let footnotePopoverContentInner = document.createElement('div');
-        footnotePopoverContentInner.innerHTML = footnoteContent.innerHTML;
-        footnotePopoverContentInner.className = 'prose bg-light dark:bg-dark font-sans prose dark:prose-invert text-black/70 dark:text-white/70 text-base lg:text-lg rounded-md border border-dark/70 dark:border-light/70 py-3.5 px-5';
-        footnotePopoverContent.innerHTML = footnotePopoverContentInner.outerHTML;
-
-        let footnotePopoverContentBackReference = footnotePopoverContent.querySelector('a[data-footnote-backref]');
-        if(footnotePopoverContentBackReference !== null) {
-            footnotePopoverContentBackReference.remove();
-        }
-
-        tippy('#' + footnoteElement.id, {
-            allowHTML: true,
-            arrow: false,
-            content: footnotePopoverContent.innerHTML,
-            placement: 'auto-start',
-            inlinePositioning: true,
-            plugins: [inlinePositioning],
-            trigger: 'click',
-            interactive: true,
-            appendTo: () => document.body
+        document.querySelectorAll('[data-text-extinction]').forEach((element) => {
+            if (element) {
+                observer.observe(element);
+            }
         });
     });
 </script>

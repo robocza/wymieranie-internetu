@@ -16,6 +16,7 @@
     "lint:eslint": "eslint ."
   },
   "dependencies": {
+    "@astrojs/mdx": "^3.1.5",
     "astro": "^4.14.3",
     "position-indicator": "^0.0.12",
     "tailwindcss": "^3.4.4",

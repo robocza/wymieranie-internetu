@@ -2,13 +2,13 @@
 import ArticleImage from "./ArticleImage.astro";
 import ArticleBlockquote from "./ArticleBlockquote.astro";
 
-// import {Content} from '../data/text.md';
+import {Content as PrefaceContent} from '../data/preface.md';
 
 import * as text from '../data/text.md';
 
 let compiledText = text.compiledContent().replaceAll(
     /(\s[a-ząćęłńóśźż]+)(o)([a-ząćęłńóśźż]+[\w.])/gu,
-    "$1<span class='relative' data-text-extinction><span data-text-extinction-victim>$2</span><span data-text-extinction-zombie class='absolute top-0 left-1/2 -translate-x-2/4 grayscale opacity-0'>🫥</span></span>$3"
+    "$1<span class='relative' data-text-extinction><span data-text-extinction-victim>$2</span><span data-text-extinction-zombie class='absolute select-none pointer-events-none top-0 left-1/2 -translate-x-2/4 grayscale opacity-0'>🫥</span></span>$3"
 )
 
 import Image1 from '../assets/image1.png';
@@ -18,8 +18,13 @@ import Image2 from '../assets/image2.png';
 
 <article id="wymieranie-internetu" class="container w-full max-w-screen-xl mx-auto font-serif py-8 lg:py-16 px-4 relative scroll-mt-[76px]">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-32">
-        <div class="lg:col-span-2 prose dark:prose-invert text-xl lg:text-2xl">
-            <Fragment set:html={compiledText} />
+        <div class="lg:col-span-2">
+            <div class="prose dark:prose-invert font-sans opacity-70 text-sm lg:text-base uppercase mb-8 lg:mb-32">
+                <PrefaceContent/>
+            </div>
+            <div class="prose dark:prose-invert text-xl lg:text-2xl">
+                <Fragment set:html={compiledText} />
+            </div>
         </div>
         <div class="flex flex-col items-center lg:items-end gap-2 lg:gap-8">
             <ArticleImage image={Image1} alt="alt" source="source"/>

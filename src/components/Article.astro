@@ -17,12 +17,15 @@ import Image2 from '../assets/image2.png';
 ---
 
 <article id="wymieranie-internetu" class="container w-full max-w-screen-xl mx-auto font-serif py-8 lg:py-16 px-4 relative scroll-mt-[76px]">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-32">
-        <div class="lg:col-span-2">
+    <div class="grid gap-8 lg:gap-32">
+        <div>
             <div class="prose dark:prose-invert font-sans opacity-70 text-sm lg:text-base uppercase mb-8 lg:mb-32">
                 <PrefaceContent/>
             </div>
-            <div class="prose dark:prose-invert text-xl lg:text-2xl">
+            <div class:list={[
+                'prose max-w-none dark:prose-invert text-xl lg:text-2xl',
+                'prose-blockquote:text-2xl prose-blockquote:lg:text-5xl prose-blockquote:font-sans prose-blockquote:uppercase prose-blockquote:not-italic prose-blockquote:[quotes:none] prose-blockquote:ps-0 prose-blockquote:border-0'
+            ]}>
                 <Fragment set:html={compiledText} />
             </div>
         </div>

@@ -34,8 +34,9 @@ nauczycieli. Choć faszyzm został pokonany militarnie, i to wysokim kosztem, je
 wojnę i kompromis klasowy, nie odniesiono się właściwie do źródeł faszyzmu, nie wspominając już o ich usunięciu. To nie przypadek, że pytanie o to, jak
 zaprojektować i jak prowadzić  "nie-faszystowskie życie", jak sformułował to Michel Foucault, pojawiło się w latach siedemdziesiątych, gdy recesja i polityka
 zaciskania pasa ponownie zawitały do krajów Zachodu. Pięćdziesiąt lat później pytanie to można przeformułować następująco: Jakiego rodzaju cyfrowe "technologie
-samych siebie" będą musiały zostać zaprojektowane, aby umożliwić nam samopoznanie w sposób niezgodny z reżimami normatywnymi? Jak prowadzić życie poza
-platformą, jednocześnie ciesząc się korzyściami płynącymi z sieci społecznościowych?[^5]
+samych siebie" będą musiały zostać zaprojektowane, aby umożliwić nam samopoznanie w sposób niezgodny z reżimami normatywnymi?
+
+> Jak prowadzić życie poza platformą, jednocześnie ciesząc się korzyściami płynącymi z sieci społecznościowych?[^5]
 
 Jednym z fundamentów krytyki aktualnej kondycji techno-społecznej będzie radykalnie zaktualizowana, XXI-wieczna wersja psychoanalizy. W *The Third Unconscious*
 Franco Berardi postuluje psychoanalizę, “która powinna przyjmować horyzont chaosu i wyczerpania za punkt wyjścia do refleksji”*[^6]* \[tłum. nasze\]. Pisze, że
@@ -47,8 +48,9 @@ fabryką, napędzaną "niespokojną pogonią za radością, której ciągle unik
 Pięćdziesiąt lat po tym, jak uwolnił pożądanie, Berardi proponuje kolejny punkt widzenia: trzecią koncepcję nieświadomości, krążącą wokół zrozumienia
 techno-społecznego wymiaru umysłu, w świecie, który nie koncentruje się już na wzroście i (schizo)produktywności, ale na wymieraniu, lęku i dewzroście. Ketamina
 zmieszana z Insta i punkiem na żywo. Ludzki umysł osiągnął stan nasycenia. Berardi obserwuje i wzywa do opracowania nowych krytycznych koncepcji, które pomogą
-nam zrozumieć dzisiejsze spektrum umysłowej wrażliwości i emocjonalnej uważności. Musimy ćwiczyć "unoszenie się na fali katastrofy", które Berardi uważa za
-precyzyjny opis "naszej kondycji psychicznej podczas trwającego właśnie trzęsienia ziemi, które jest również trzęsieniem serca i umysłu"[^8].
+nam zrozumieć dzisiejsze spektrum umysłowej wrażliwości i emocjonalnej uważności.
+
+> Musimy ćwiczyć "unoszenie się na fali katastrofy", które Berardi uważa za precyzyjny opis "naszej kondycji psychicznej podczas trwającego właśnie trzęsienia ziemi, które jest również trzęsieniem serca i umysłu"[^8].
 
 Według Berardiego "faszyzm to zasadniczo psychotyczna reakcja na bezsilność i upokorzenie", co udowodnił wcześniej w *Męskich Fantazjach* Theweleit. Płynne
 przejście od Covidu do wojny na Ukrainie, inflacja i kryzys energetyczny tylko dodatkowo przyspieszyły przepalenie się obwodu
@@ -113,9 +115,11 @@ wyobraźni, która na wiele sposobów pokazywała, że inne technologie, wertyka
 Stagnacja i recesja zostały już szczegółowo opisane, teraz naszym celem jest stworzenie teorii rozpadu. Po dekonstrukcji przyjdzie destrukcja. Instytucje, z ich
 domyślnym optymizmem, nie nagrodzą nas za ostrzeganie o katastrofie, tak samo jak nikt nie doceniał krytyki internetu i propozycji alternatyw w czasach
 pre-apokaliptycznych. Najwyższy czas by połączyć zimne, menedżerskie podejście do zarządzania za pomocą algorytmów z duchologią Marka Fishera[^14]. Musimy się
-ocknąć i zrozumieć, że zaciemnienie jest systemowe. Nihilistyczny trend szybkiego wzbogacania się na krypto to jedna z technologii Dnia Ostatecznego. Co się
-wydarzy, gdy to, co niewidoczne, stanie się widoczne, a my przezwyciężymy pustkę w głowach? W powietrzu unosi się woń wymierania. Kapitalistyczny darwinizm
-zakłada, że jak chcesz być biedny i *offline*, w chłodzie, upale, suszy i powodzi – to wszystko twój wybór. Nadszedł czas na strajk, strajk przeciwko
+ocknąć i zrozumieć, że zaciemnienie jest systemowe. Nihilistyczny trend szybkiego wzbogacania się na krypto to jedna z technologii Dnia Ostatecznego.
+
+> Co się wydarzy, gdy to, co niewidoczne, stanie się widoczne, a my przezwyciężymy pustkę w głowach? 
+
+W powietrzu unosi się woń wymierania. Kapitalistyczny darwinizm zakłada, że jak chcesz być biedny i *offline*, w chłodzie, upale, suszy i powodzi – to wszystko twój wybór. Nadszedł czas na strajk, strajk przeciwko
 optymalizacji. Przestańmy optymalizować. Dosyć zwiększania efektywności i podnoszenia produktywności. Nadszedł czas by nauczyć się projektować problemy. Czas
 wymyślania prowotypów. Zapytajmy o radę Angelicism01, substackową personę – moją nihilistyczną Gretę Thunberg – e-dziewczynę, poetkę, teoretyczkę i równocześnie
 wirtualną osobę, która pisze: "Internet jest niemożliwy. Nie myślę o tym, bo to mnie rozwala. Dzień w internecie jest wszystkim. Nie umiem przewidzieć, czy

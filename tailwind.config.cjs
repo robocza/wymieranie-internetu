@@ -13,6 +13,8 @@ module.exports = {
             },
             backgroundImage: {
                 'chain': "url('/assets/chain.png')",
+                'extinct-light': "url('/assets/extinct-light.png')",
+                'extinct-dark': "url('/assets/extinct-dark.png')",
             },
             boxShadow: {
                 image: 'inset 0px 0px 10px 10px #0000',

@@ -97,3 +97,44 @@ import Image2 from '../assets/image2.png';
         }
     });
 </script>
+
+<script>
+    import tippy from 'tippy.js';
+
+    document.querySelectorAll('[data-footnote-ref]').forEach((footnoteElement) => {
+        let footnoteId = footnoteElement.getAttribute('href');
+        if(footnoteId === null){
+            return;
+        }
+
+        footnoteElement.addEventListener("click", function(event){
+            event.preventDefault()
+        });
+
+        let footnoteContent = document.getElementById(footnoteId.slice(1));
+        if(footnoteContent === null){
+            return;
+        }
+
+        let footnotePopoverContent = document.createElement('div');
+        let footnotePopoverContentInner = document.createElement('div');
+        footnotePopoverContentInner.innerHTML = footnoteContent.innerHTML;
+        footnotePopoverContentInner.className = 'prose bg-light dark:bg-dark font-sans prose dark:prose-invert text-black/70 dark:text-white/70 text-base lg:text-lg rounded-md border border-dark/70 dark:border-light/70 py-3.5 px-5';
+        footnotePopoverContent.innerHTML = footnotePopoverContentInner.outerHTML;
+
+        let footnotePopoverContentBackReference = footnotePopoverContent.querySelector('a[data-footnote-backref]');
+        if(footnotePopoverContentBackReference !== null) {
+            footnotePopoverContentBackReference.remove();
+        }
+
+        tippy('#' + footnoteElement.id, {
+            allowHTML: true,
+            arrow: false,
+            content: footnotePopoverContent.innerHTML,
+            placement: 'right-start',
+            trigger: 'click',
+            interactive: true,
+            appendTo: () => document.body
+        });
+    });
+</script>

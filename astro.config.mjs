@@ -12,6 +12,11 @@ export default defineConfig({
     integrations: [
         tailwind(),
     ],
+    markdown: {
+        remarkRehype: {
+            footnoteLabel: "Przypisy",
+        },
+    },
     vite: {
         server: {
             watch: {

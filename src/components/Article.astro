@@ -1,5 +1,6 @@
 ---
 import ArticleBlockquote from "./ArticleBlockquote.astro";
+import ArticleFootnote from "./ArticleFootnote.astro";
 import Prose from "./Prose.astro";
 
 import {Content as PrefaceContent} from '../data/preface.md';
@@ -14,7 +15,7 @@ import {Content as TextContent} from '../data/text.mdx';
                 <PrefaceContent/>
             </Prose>
             <Prose id="text">
-                <TextContent components={{blockquote: ArticleBlockquote }}/>
+                <TextContent components={{blockquote: ArticleBlockquote, sup: ArticleFootnote }}/>
             </Prose>
         </div>
     </div>

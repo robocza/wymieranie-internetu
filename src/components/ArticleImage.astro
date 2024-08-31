@@ -1,6 +1,6 @@
 ---
 import {Image} from 'astro:assets';
-import Link from "../components/Link.astro";
+import SimpleLink from "../components/SimpleLink.astro";
 
 import type {ImageMetadata} from 'astro';
 
@@ -35,7 +35,11 @@ const {
     {
         source && (
             <div class="mx-2 text-right peer-hover/image:invisible">
-                <Link text="źródło" url={source} />
+                <SimpleLink
+                    text="źródło"
+                    url={source}
+                    className="font-sans text-lg font-normal text-black dark:text-white opacity-70 underline underline-offset-4 hover:opacity-90 pl-6 bg-left bg-no-repeat bg-[length:18px_18px] relative bg-chain"
+                />
             </div>
         )
     }

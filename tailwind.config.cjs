@@ -11,6 +11,9 @@ module.exports = {
                 'fade-in': 'fadeIn 60s ease-in-out forwards',
                 'fade-out': 'fadeOut 60s ease-in-out forwards',
             },
+            backgroundImage: {
+                'chain': "url('/assets/chain.png')",
+            },
             boxShadow: {
                 image: 'inset 0px 0px 10px 10px #0000',
             },

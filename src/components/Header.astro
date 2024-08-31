@@ -6,7 +6,7 @@ import SimpleLink from "./SimpleLink.astro";
 import ThemeSelect from "./ThemeSelect.astro";
 ---
 
-<nav class="transition-transform duration-300 ease-in-out top-0 z-40 flex-none mx-auto w-full border-b border-dark dark:border-light hidden lg:block fixed">
+<nav class="transition-transform duration-300 ease-in-out top-0 z-40 flex-none mx-auto w-full shadow-lg shadow-light dark:shadow-dark hidden lg:block fixed">
     <div class="absolute inset-0 bg-light dark:bg-dark opacity-90"></div>
     <div class="relative mx-auto w-full">
         <div class="flex justify-between lg:grid lg:grid-cols-3 px-4 h-16 lg:h-20">
@@ -23,12 +23,12 @@ import ThemeSelect from "./ThemeSelect.astro";
     </div>
 </nav>
 
-<header class="lg:transition-transform duration-300 ease-in-out top-0 z-50 flex-none mx-auto w-full border-b border-dark dark:border-light fixed">
+<header class="lg:transition-transform duration-300 ease-in-out top-0 z-50 flex-none mx-auto w-full fixed">
     <div class="absolute inset-0 bg-light dark:bg-dark"></div>
-    <div class="relative mx-auto w-full">
+    <div class="relative container w-full max-w-screen-xl mx-auto ">
         <div class="grid grid-flow-col justify-between lg:grid-cols-3 px-4 h-16 lg:h-20">
             <div class="flex items-center justify-start sm:gap-x-2 lg:gap-x-8">
-                <SimpleLink text="O książce" url="/o-ksiazce" extraClassName="uppercase" />
+                <SimpleLink text="O tekście" url="/o-tekcie" extraClassName="uppercase xl:text-2xl" />
             </div>
             <div class="flex items-center justify-center sm:gap-x-2 lg:gap-x-8">
                 <ThemeSelect/>

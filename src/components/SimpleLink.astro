@@ -1,14 +1,14 @@
 ---
 interface Props {
     url: string;
-    text: string;
+    text?: string;
     className?: string;
     extraClassName?: string;
 }
 
 const {
     url,
-    text,
+    text = await Astro.slots.render('text'),
     className = "font-sans text-sm sm:text-base lg:text-lg font-normal text-black dark:text-white underline underline-offset-2 lg:underline-offset-4 hover:opacity-70",
     extraClassName = '',
 } = Astro.props;
@@ -17,4 +17,6 @@ const {
 <a class:list={[
     className,
     extraClassName,
-]} href={url}>{text}</a>
+]} href={url}>
+    <slot name="text">{text}</slot>
+</a>

@@ -20,36 +20,36 @@ const {
 
 ---
 
-<div class="not-prose flex flex-col items-center lg:items-end lg:relative lg:float-right lg:clear-both">
-    <div class="mb-4">
-        <div class:list={[
+<span class="relative not-prose my-4 flex flex-col items-center lg:items-end lg:absolute lg:w-80 lg:right-0 lg:my-0 lg:-mt-8">
+    <span class="relative">
+        <span class:list={[
             'relative',
             'peer/image',
             { 'hover:blur hover:opacity-60': translation },
         ]}>
-            <div class="absolute inset-0 shadow-image shadow-light dark:shadow-dark z-20"></div>
+            <span class="absolute inset-0 shadow-image shadow-light dark:shadow-dark z-20"></span>
             <Image src={image}
                    alt={alt}
                    class="relative z-10 max-w-80"
             />
-        </div>
+        </span>
         {
             source && (
-                        <div class="mx-2 text-right peer-hover/image:invisible">
-                            <SimpleLink
-                                    text="źródło"
-                                    url={source}
-                                    className="font-sans text-lg font-normal text-black dark:text-white opacity-70 underline underline-offset-4 hover:opacity-90 pl-6 bg-left bg-no-repeat bg-[length:18px_18px] relative bg-chain"
-                            />
-                        </div>
+                <span class="mx-2 text-right block peer-hover/image:invisible">
+                    <SimpleLink
+                            text="źródło"
+                            url={source}
+                            className="font-sans text-lg font-normal text-black dark:text-white opacity-70 underline underline-offset-4 hover:opacity-90 pl-6 bg-left bg-no-repeat bg-[length:18px_18px] relative bg-chain"
+                    />
+                </span>
             )
         }
         {
             translation && (
-                <div class="font-sans absolute left-0 top-0 z-10 p-5 pointer-events-none invisible peer-hover/image:visible">
+                <span class="font-sans absolute left-0 top-0 z-10 p-5 pointer-events-none invisible peer-hover/image:visible">
                     <fragment set:html={translation} />
-                </div>
+                </span>
             )
         }
-    </div>
-</div>
+    </span>
+</span>

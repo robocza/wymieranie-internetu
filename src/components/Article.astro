@@ -11,12 +11,15 @@ import {Content as TextContent} from '../data/text.mdx';
 <article id="wymieranie-internetu" class="container w-full max-w-screen-md lg:max-w-screen-xl mx-auto font-serif py-8 lg:py-16 px-4 relative scroll-mt-[76px]">
     <div class="grid gap-8 lg:gap-32">
         <div>
-            <Prose extraClass="font-sans opacity-70 text-sm lg:text-base uppercase mb-8 lg:mb-32">
+            <Prose extraClass="font-sans opacity-70 text-sm lg:text-base uppercase mb-4 lg:mb-8">
                 <PrefaceContent/>
             </Prose>
-            <Prose id="text">
+            <Prose id="text" extraClass="mb-8 lg:mb-32">
                 <TextContent components={{blockquote: ArticleBlockquote, sup: ArticleFootnote }}/>
             </Prose>
+            <p class="opacity-70 uppercase font-sans text-xs lg:text-sm mb-8 lg:mb-16">
+                tłumaczenie: Katarzyna Janota, Kuba Kulesza, Cezary Stępkowski, Agnieszka Zgud
+            </p>
         </div>
     </div>
 </article>

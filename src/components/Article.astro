@@ -5,6 +5,7 @@ import Prose from "./Prose.astro";
 
 import {Content as PrefaceContent} from '../data/preface.md';
 import {Content as TextContent} from '../data/text.mdx';
+import {Content as BibliographyContent} from '../data/bibliography.md';
 
 ---
 
@@ -20,6 +21,10 @@ import {Content as TextContent} from '../data/text.mdx';
             <p class="opacity-70 uppercase font-sans text-xs lg:text-sm mb-8 lg:mb-16">
                 tłumaczenie: Katarzyna Janota, Kuba Kulesza, Cezary Stępkowski, Agnieszka Zgud
             </p>
+            <h4 class="opacity-70 uppercase font-sans text-2xl lg:text-5xl mb-8 lg:mb-16">Bibliografia</h4>
+            <Prose extraClass="font-sans opacity-70 text-sm lg:text-base uppercase">
+                <BibliographyContent/>
+            </Prose>
         </div>
     </div>
 </article>

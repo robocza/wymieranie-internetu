@@ -1,5 +1,3 @@
-**Bibliografia (w kolejności występowania cytatów):**
-
 1. _Konieczna bifurkacja. „Nie ma alternatywy”_, red. B. Stiegler i Kolektyw Internacja, tłum. M. Krzykawski, K. Lebek, M. Markiewicz, Wydawnictwo Uniwersytetu Śląskiego, Katowice 2023
 
 2. G. Deleuze, F. Guattari, _Co to jest filozofia?_, tłum. P. Pieniążek, Słowo/Obraz Terytoria, Gdańsk 2000

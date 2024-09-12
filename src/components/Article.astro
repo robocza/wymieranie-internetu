@@ -5,6 +5,7 @@ import Prose from "./Prose.astro";
 
 import {Content as PrefaceContent} from '../data/preface.md';
 import {Content as TextContent} from '../data/text.mdx';
+import {Content as AfterwordContent} from '../data/afterword.md';
 import {Content as BibliographyContent} from '../data/bibliography.md';
 
 ---
@@ -15,14 +16,15 @@ import {Content as BibliographyContent} from '../data/bibliography.md';
             <Prose extraClass="font-sans opacity-70 text-sm lg:text-base uppercase mb-4 lg:mb-8">
                 <PrefaceContent/>
             </Prose>
-            <Prose id="text" extraClass="relative mb-8 lg:mb-32">
+            <Prose id="text" extraClass="relative mb-16 lg:mb-64">
                 <TextContent components={{blockquote: ArticleBlockquote, sup: ArticleFootnote }}/>
             </Prose>
-            <p class="opacity-70 uppercase font-sans text-xs lg:text-sm mb-8 lg:mb-16">
-                tłumaczenie: Katarzyna Janota, Kuba Kulesza, Cezary Stępkowski, Agnieszka Zgud
-            </p>
+            <h4 class="opacity-70 uppercase font-sans text-2xl lg:text-5xl mb-8 lg:mb-16">Od tłumaczx</h4>
+            <Prose extraClass="font-sans opacity-70 text-base lg:text-xl mb-16 lg:mb-32">
+                <AfterwordContent/>
+            </Prose>
             <h4 class="opacity-70 uppercase font-sans text-2xl lg:text-5xl mb-8 lg:mb-16">Bibliografia</h4>
-            <Prose extraClass="font-sans opacity-70 text-sm lg:text-base uppercase">
+            <Prose extraClass="font-sans opacity-70 text-sm lg:text-base uppercase mb-8 lg:mb-16">
                 <BibliographyContent/>
             </Prose>
         </div>

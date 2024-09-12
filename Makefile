@@ -60,9 +60,8 @@ npm-install: ## Install dependencies according to the current package-lock.json 
 	make npm-build
 
 npm-update: ## Update node packages
-	$(NPM) update
+	$(NPM) update --save
 	$(NPM) install --force
-	make npm-build-dev
 
 npm-build: ## Build for production environment
 	@$(NPM) run build
@@ -78,3 +77,6 @@ build-dev:
 
 build:
 	npm run build
+
+check:
+	npm run astro check

@@ -1,7 +1,7 @@
 # Terminal Grotesque
 
-Libre pixel / grotesque font.
-=======
+# Libre pixel / grotesque font.
+
 Open source pixel / grotesque font family.
 
 ## Specimen

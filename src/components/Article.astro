@@ -14,7 +14,7 @@ import {Content as TextContent} from '../data/text.mdx';
             <Prose extraClass="font-sans opacity-70 text-sm lg:text-base uppercase mb-4 lg:mb-8">
                 <PrefaceContent/>
             </Prose>
-            <Prose id="text" extraClass="mb-8 lg:mb-32">
+            <Prose id="text" extraClass="relative mb-8 lg:mb-32">
                 <TextContent components={{blockquote: ArticleBlockquote, sup: ArticleFootnote }}/>
             </Prose>
             <p class="opacity-70 uppercase font-sans text-xs lg:text-sm mb-8 lg:mb-16">
@@ -29,12 +29,12 @@ import {Content as TextContent} from '../data/text.mdx';
 
     document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll('#text > p').forEach((element) => {
-            if (element) {
-                element.innerHTML = element.innerHTML.replaceAll(
-                    /(\s)([a-ząćęłńóśźż]+)(o)([a-ząćęłńóśźż]+[\w.])/gu,
-                    "$1<span class='text-nowrap'>$2<span class='relative' data-text-extinction><span data-text-extinction-victim>$3</span><span class='select-none absolute text-transparent bg-extinct-light dark:bg-extinct-dark left-0 -top-0.5 bg-no-repeat bg-contain bg-center' data-text-extinction-zombie>$3</span>$4</span></span>"
-                );
-            }
+            // if (element) {
+            //     element.innerHTML = element.innerHTML.replaceAll(
+            //         /(\s)([a-ząćęłńóśźż]+)(o)([a-ząćęłńóśźż]+[\w.])/gu,
+            //         "$1<span class='text-nowrap'>$2<span class='relative' data-text-extinction><span data-text-extinction-victim>$3</span><span class='select-none absolute text-transparent bg-extinct-light dark:bg-extinct-dark left-0 -top-0.5 bg-no-repeat bg-contain bg-center' data-text-extinction-zombie>$3</span>$4</span></span>"
+            //     );
+            // }
         });
 
         document.querySelectorAll('[data-footnote-ref]').forEach((footnoteElement) => {

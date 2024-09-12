@@ -17,7 +17,11 @@ import ThemeSelect from "./ThemeSelect.astro";
 
             </div>
             <div class="flex items-center justify-end gap-x-1 sm:gap-x-2 lg:gap-x-8">
-                <ReadingPositionIndicator />
+                {
+                    Astro.url.pathname === '/' && (
+                         <ReadingPositionIndicator />
+                    )
+                }
             </div>
         </div>
     </div>
@@ -28,15 +32,19 @@ import ThemeSelect from "./ThemeSelect.astro";
     <div class="relative container w-full max-w-screen-xl mx-auto ">
         <div class="grid grid-flow-col justify-between lg:grid-cols-3 px-4 h-16 lg:h-20">
             <div class="flex items-center justify-start sm:gap-x-2 lg:gap-x-8">
-                <SimpleLink text="O tekście" url="/kolofon" extraClassName="uppercase xl:text-2xl" />
+                <SimpleLink text={Astro.url.pathname === '/' ? 'O tekście' : 'Wróć do czytania'} url={Astro.url.pathname === '/' ? '/kolofon' : '/'} extraClassName="uppercase xl:text-2xl" />
             </div>
             <div class="flex items-center justify-center sm:gap-x-2 lg:gap-x-8">
                 <ThemeSelect/>
             </div>
             <div class="flex items-center justify-end sm:gap-x-2 lg:gap-x-8">
-                <div class="flex lg:hidden items-center">
-                    <ReadingPositionIndicator />
-                </div>
+                {
+                    Astro.url.pathname === '/' && (
+                        <div class="flex lg:hidden items-center">
+                            <ReadingPositionIndicator />
+                        </div>
+                    )
+                }
                 <a class="hidden lg:flex items-center" target="_blank" href="https://mvu.pl/">
                     <LogoMVU />
                 </a>

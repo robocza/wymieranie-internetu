@@ -1,52 +1,51 @@
 ---
-import ArticleBlockquote from "./ArticleBlockquote.astro";
-import ArticleFootnote from "./ArticleFootnote.astro";
-import Prose from "./Prose.astro";
 
-import {Content as PrefaceContent} from '../data/preface.md';
-import {Content as TextContent} from '../data/text.mdx';
 import Central from "../layouts/elements/arrangement/Central.astro";
+import LogoGR from "./LogoGR.astro";
+import ColophonLink from "./ColophonLink.astro";
 
 ---
 
-<section class="min-h-screen container w-full max-w-screen-md lg:max-w-screen-xl mx-auto font-serif py-8 lg:py-16 px-4 relative">
-
-        <div class="min-h-screen grid gap-8 grid-cols-2 lg:gap-32">
+<section class="container w-full max-w-screen-md lg:max-w-screen-xl mx-auto font-serif px-4 relative">
+        <div class="py-32 lg:py-0 lg:h-screen font-sans text-xl">
             <Central>
-                <div class="text-left">
-                    tłumaczenie:<br>
-                    Katarzyna Janota, Kuba Kulesza, Cezary Stępkowski, Agnieszka Zgud<br>
-                    <br>
-                    redakcja i korekta:<br>
-                    Aleksandra Kleczka<br>
-                    <br>
-                    projekt i wykonanie strony internetowej: Maja Starakiewicz, Cezary Stępkowski<br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    Fundacja Grupa Robocza<br>
-                    ul. Mikołaja Kopernika 19A,<br>
-                    31-531 Kraków<br>
-                    grupa@robocza.org<br>
-                    <br>
-                    Kraków 2024<br>
-                    <br>
-                    <br>
-                    ISBN (wydanie internetowe): <br>
-                    ISBN (wydanie drukowane/pdf):
-                </div>
-            </Central>
-            <Central>
-                <div class="text-left">
-                    Ta publikacja jest dostępna na licencji 🔗 Creative Commons Attribution NonCommercial ShareAlike 4.0 Unported (CC BY-NC-SA 4.0).<br>
-                    <br>
-                    W projekcie użyto krojów Terminal Grotesque (aut. Raphaël Bastide i Jérémy Landes, 🔗 velvetyne.fr), Karrik (aut. Jean-Baptiste Morizot, Lucas Le Bihan,  🔗 velvetyne.fr) i Times New Roman.<br>
-                    <br>
-                    Podziękowania dla Michała Krzykawskiego za uwagi dotyczące odniesień do Bernarda Stieglera.<br>
+                <div class="grid gap-8 lg:grid-cols-2 lg:gap-32">
+                    <div class="text-left uppercase">
+                        redaktorka prowadząca:<br>
+                        Agnieszka Zgud<br>
+                        <br>
+                        tłumaczenie:<br>
+                        Katarzyna Janota, Kuba Kulesza, Cezary Stępkowski, Agnieszka Zgud<br>
+                        <br>
+                        redakcja i korekta:<br>
+                        Aleksandra Kleczka<br>
+                        <br>
+                        projekt i wykonanie strony internetowej:<br>
+                        Maja Starakiewicz, Cezary Stępkowski<br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <a class="h-10" target="_blank" href="https://grupa.robocza.org/">
+                            <LogoGR height={47} />
+                        </a>
+                        <br>
+                        Fundacja Grupa Robocza<br>
+                        ul. Mikołaja Kopernika 19A,<br>
+                        31-531 Kraków<br>
+                        grupa@robocza.org<br>
+                        <br>
+                        Kraków 2024
+                    </div>
+                    <div class="text-left">
+                        Ta publikacja jest dostępna na licencji <ColophonLink text="Creative Commons Attribution NonCommercial ShareAlike 4.0 Unported (CC BY-NC-SA 4.0)" url="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pl" />.<br>
+                        <br>
+                        W projekcie użyto krojów Terminal Grotesque (aut. Raphaël Bastide i Jérémy Landes, <ColophonLink text="velvetyne.fr" url="https://www.velvetyne.fr/" />), Karrik (aut. Jean-Baptiste Morizot, Lucas Le Bihan,
+                        <ColophonLink text="velvetyne.fr" url="https://www.velvetyne.fr/" />) i Times New Roman.<br>
+                        <br>
+                        Podziękowania dla Michała Krzykawskiego za uwagi dotyczące odniesień do Bernarda Stieglera.<br>
+                    </div>
                 </div>
             </Central>
         </div>
-
 </section>

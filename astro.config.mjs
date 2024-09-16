@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config'
 // import netlify from '@astrojs/netlify/functions';
 import mdx from '@astrojs/mdx'
 import tailwind from '@astrojs/tailwind'
+import { letterExtinctionRemarkPlugin } from './src/helper/letter-extinction-remark-plugin.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,7 +15,8 @@ export default defineConfig({
   markdown: {
     remarkRehype: {
       footnoteLabel: 'Przypisy'
-    }
+    },
+    remarkPlugins: [letterExtinctionRemarkPlugin]
   },
   vite: {
     server: {

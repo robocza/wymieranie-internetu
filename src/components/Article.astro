@@ -74,15 +74,6 @@ import {Content as BibliographyContent} from '../data/bibliography.md';
             });
         });
 
-        document.querySelectorAll('#text > p').forEach((element) => {
-            if (element && element.children.length === 0) {
-                element.innerHTML = element.innerHTML.replaceAll(
-                    /(\s)([a-ząćęłńóśźż]+)(o)([a-ząćęłńóśźż]+[\w.])/gu,
-                    "$1<span class='text-nowrap'>$2<span class='relative' data-text-extinction><span data-text-extinction-victim>$3</span><span class='select-none absolute text-transparent bg-extinct-light dark:bg-extinct-dark left-0 -top-0.5 bg-no-repeat bg-contain bg-center' data-text-extinction-zombie>$3</span>$4</span></span>"
-                );
-            }
-        });
-
         const observer = new IntersectionObserver(
             ((entries) => {
                 entries.forEach(entry => {

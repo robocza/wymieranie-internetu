@@ -53,7 +53,7 @@ import {Content as BibliographyContent} from '../data/bibliography.md';
             let footnotePopoverContent = document.createElement('div');
             let footnotePopoverContentInner = document.createElement('div');
             footnotePopoverContentInner.innerHTML = footnoteContent.innerHTML;
-            footnotePopoverContentInner.className = 'prose bg-light dark:bg-dark font-sans prose dark:prose-invert text-black/70 dark:text-white/70 text-base lg:text-lg rounded-md border border-dark/70 dark:border-light/70 py-3.5 px-5';
+            footnotePopoverContentInner.className = 'prose bg-light dark:bg-dark font-sans prose dark:prose-invert text-black/70 dark:text-white/70 text-base lg:text-lg rounded-md border border-dark/70 dark:border-light/70 py-3.5 px-5 break-words';
             footnotePopoverContent.innerHTML = footnotePopoverContentInner.outerHTML;
 
             let footnotePopoverContentBackReference = footnotePopoverContent.querySelector('a[data-footnote-backref]');

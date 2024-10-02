@@ -29,12 +29,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Karrik', ...defaultTheme.fontFamily.sans],
-        serif: ['Times New Roman', ...defaultTheme.fontFamily.serif],
-        pixel: ['TerminalGrotesque', ...defaultTheme.fontFamily.sans],
-        'pixel-open': [
-          'TerminalGrotesqueOpen',
-          ...defaultTheme.fontFamily.sans
-        ]
+        serif: ['Redaction10', 'Times New Roman', ...defaultTheme.fontFamily.serif],
+        pixel: ['Redaction50', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
         '4xl': '2.5rem',

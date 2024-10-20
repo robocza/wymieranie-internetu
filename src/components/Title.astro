@@ -1,2 +1,11 @@
-Wymieranie<br>
-internetu
+---
+import {Image} from "astro:assets";
+import CoverImage from '../assets/cover.png';
+---
+<div class="">
+    <Image src={CoverImage}
+           alt="Wymieranie internetu"
+           class="max-h-96 w-auto px-4 xl:px-0"
+           loading="eager"
+    />
+</div>

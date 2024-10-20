@@ -15,7 +15,7 @@ module.exports = {
         'extinct-dark': "url('/assets/extinct-dark.png')"
       },
       boxShadow: {
-        image: 'inset 0px 0px 10px 10px #0000'
+        image: 'inset 0px 0px 5px 5px #0000'
       },
       boxShadowColor: ({ theme }) => ({
         light: theme('colors.light'),

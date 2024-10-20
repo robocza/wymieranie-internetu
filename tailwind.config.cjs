@@ -30,6 +30,7 @@ module.exports = {
       fontFamily: {
         sans: ['Karrik', ...defaultTheme.fontFamily.sans],
         serif: ['Redaction10', 'Times New Roman', ...defaultTheme.fontFamily.serif],
+        blockquote: ['Redaction35', ...defaultTheme.fontFamily.sans],
         pixel: ['Redaction50', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {

@@ -6,14 +6,14 @@
 
 4. M. Fisher, _Postcapitalist Desire_, Repeater Books, London 2021
 
-5. B. Stiegler, _Elements for a Neganthropology of Automatic Man_, w: _Philosophy Today_, tom 65, wydanie 2 (wiosna 2021), s. 242\.
+5. B. Stiegler, _Elements for a Neganthropology of Automatic Man_, w: _Philosophy Today_, tom 65, wydanie 2 (wiosna 2021)
 
-6. T. Maughan, _Infinite Detail_, MCD x FDG Originals, New York, 2019\.
+6. T. Maughan, _Infinite Detail_, MCD x FDG Originals, New York, 2019
 
-7. M. Fisher, _Realizm kapitalistyczny: czy nie ma alternatywy?_, tłum. A. Karalus, Instytut Wydawniczy Książka i Prasa, Warszawa 2020, s. 38\.
+7. M. Fisher, _Realizm kapitalistyczny: czy nie ma alternatywy?_, tłum. A. Karalus, Instytut Wydawniczy Książka i Prasa, Warszawa 2020
 
-8. G. Lovink, _Stuck on the Platform_, Valiz, Amsterdam 2022\.
+8. G. Lovink, _Stuck on the Platform_, Valiz, Amsterdam 2022
 
-9. M. Marder, _Philosophy for Passengers_, The MIT Press, Cambridge (Mass.), 2022\.
+9. M. Marder, _Philosophy for Passengers_, The MIT Press, Cambridge (Mass.), 2022
 
 10. W. Benjamin, O pojęciu historii w: _Anioł historii: eseje, szkice, fragmenty_, Wydawnictwo Poznańskie, Poznań 1996

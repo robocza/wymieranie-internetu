@@ -30,12 +30,26 @@ import ThemeSelect from "./ThemeSelect.astro";
 <header class="lg:transition-transform duration-300 ease-in-out top-0 z-50 flex-none mx-auto w-full fixed">
     <div class="absolute inset-0 bg-light dark:bg-dark"></div>
     <div class="relative container w-full max-w-screen-xl mx-auto ">
-        <div class="grid grid-flow-col justify-between lg:grid-cols-3 px-4 h-16 lg:h-20">
-            <div class="flex items-center justify-start sm:gap-x-2 lg:gap-x-8">
-                <SimpleLink text={Astro.url.pathname === '/' ? 'O tekście' : 'Wróć do czytania'} url={Astro.url.pathname === '/' ? '/kolofon' : '/'} extraClassName="uppercase xl:text-2xl" />
+        <div class="grid grid-flow-col auto-cols-fr justify-between lg:grid-cols-3 px-4 h-16 lg:h-20">
+            <div class="flex items-center justify-start gap-x-8">
+                {
+                    !Astro.url.pathname.startsWith('/dziekujemy') && (
+                        <SimpleLink text={Astro.url.pathname === '/' ? 'O tekście' : 'Wróć do czytania'} url={Astro.url.pathname === '/' ? '/kolofon' : '/'} extraClassName="uppercase xl:text-2xl" />
+                        <SimpleLink text="Sklep" url="/sklep" extraClassName="uppercase xl:text-2xl" />
+                    )
+                }
             </div>
             <div class="flex items-center justify-center sm:gap-x-2 lg:gap-x-8">
-                <ThemeSelect/>
+                {
+                    Astro.url.pathname === '/' && (
+                        <ThemeSelect/>
+                    )
+                }
+                {
+                    Astro.url.pathname.startsWith('/dziekujemy') && (
+                        <SimpleLink text="Wróć do czytania" url="/" extraClassName="uppercase xl:text-2xl" />
+                    )
+                }
             </div>
             <div class="flex items-center justify-end sm:gap-x-2 lg:gap-x-8">
                 {
@@ -45,12 +59,28 @@ import ThemeSelect from "./ThemeSelect.astro";
                         </div>
                     )
                 }
-                <a class="hidden lg:flex items-center" target="_blank" href="https://mvu.pl/">
-                    <LogoMVU />
-                </a>
-                <a class="hidden lg:flex items-center" target="_blank" href="https://grupa.robocza.org/">
-                    <LogoGR />
-                </a>
+                {
+                    Astro.url.pathname !== '/' && !Astro.url.pathname.startsWith('/dziekujemy') && (
+                        <ThemeSelect/>
+                    )
+                }
+                {
+                    Astro.url.pathname === '/' && (
+                        <div class="flex lg:hidden items-center">
+                            <ReadingPositionIndicator />
+                        </div>
+                    )
+                }
+                {
+                    !Astro.url.pathname.startsWith('/sklep') &&  !Astro.url.pathname.startsWith('/dziekujemy') && (
+                        <a class="hidden lg:flex items-center" target="_blank" href="https://mvu.pl/">
+                            <LogoMVU />
+                        </a>
+                        <a class="hidden lg:flex items-center" target="_blank" href="https://grupa.robocza.org/">
+                            <LogoGR />
+                        </a>
+                    )
+                }
             </div>
         </div>
     </div>

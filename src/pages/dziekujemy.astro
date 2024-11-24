@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Central from "../layouts/elements/arrangement/Central.astro";
+import LogoGR from "../components/LogoGR.astro";
+---
+
+<Layout title="Geert Lovink, 𝘞𝘺𝘮𝘪𝘦𝘳𝘢𝘯𝘪𝘦 𝘪𝘯𝘵𝘦𝘳𝘯𝘦𝘵𝘶 - dziekujemy">
+    <main>
+        <section class="2xl:pt-0 flex h-full items-center justify-center min-h-screen">
+            <Central>
+                <h1 class="mt-8 text-5xl lg:text-8xl uppercase font-blockquote">Dziękujemy</h1>
+                <h2 class="text-lg lg:text-2xl font-blockquote">za zakupy w naszym sklepie</h2>
+                <div class="mt-8 2xl:mt-16 max-w-sm mx-auto my-16">
+                    <div>Książki i czapki będzie można odebrać podczas premiery <i>Wymierania Internetu</i>:</div>
+                    <div class="uppercase my-4">
+                        środa, 04.12.2024, 18:00<br>
+                        Apteka Designu,<br>
+                        ul. Kopernika 19A, Kraków
+                    </div>
+                    <div>Jeżeli chcesz umówić się na odbiór innego dnia, napisz do nas na grupa@robocza.org.</div>
+                </div>
+                <a class="mx-auto inline-block" target="_blank" href="https://grupa.robocza.org/">
+                    <LogoGR />
+                </a>
+            </Central>
+        </section>
+    </main>
+</Layout>

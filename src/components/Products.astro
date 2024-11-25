@@ -1,15 +1,15 @@
 ---
 
 import Product from "./Product.astro";
-import Product1 from '../assets/products/book.png';
-import Product2 from '../assets/products/cap.png';
-import Product3 from '../assets/products/book-and-cap.png';
+import Product1 from '../assets/products/book.webp';
+import Product2 from '../assets/products/cap.webp';
+import Product3 from '../assets/products/book-and-cap.webp';
 ---
 
 <section class="container w-full max-w-screen-md lg:max-w-screen-xl mx-auto font-serif px-4 relative">
     <div class="py-32 lg:py-48 lg:min-h-screen text-xl">
         <div class="grid gap-8 lg:grid-cols-3 lg:gap-32">
-            <Product image={Product1} alt="Okładka książki „Wymieranie internetu”" buyLink="https://buy.stripe.com/eVacQB3aJ70B43mfYY" price="33 zł">
+            <Product image={Product1} alt="Okładka książki „Wymieranie internetu”" buyLink="https://buy.stripe.com/eVacQB3aJ70B43mfYY" price="33 zł">
                 <fragment slot="title">
                     Papierowa książka<br>
                     <i>Wymieranie internetu</i>
@@ -20,7 +20,7 @@ import Product3 from '../assets/products/book-and-cap.png';
                     Projekt: Maja Starakiewicz i Dawid Prząda
                 </fragment>
             </Product>
-            <Product image={Product2} alt="Czapka „Eat the sun”" buyLink="https://buy.stripe.com/14k3g112B84F43mbIJ" price="111 zł">
+            <Product image={Product2} alt="Czapka „Eat the sun”" buyLink="https://buy.stripe.com/14k3g112B84F43mbIJ" price="111 zł">
                 <fragment slot="title">Czapka z daszkiem</fragment>
                 <fragment slot="description">
                     Czapka stanowi uniwersalną odpowiedź na ocieplenie klimatu, wzrost cen żywności, doomscrolling oraz inne zjawiska ze stosu kryzysów. Jest solar- i lunarpunkowa jednocześnie. Uniwersalny rozmiar, regulowany metalową sprzączką.
@@ -29,7 +29,7 @@ import Product3 from '../assets/products/book-and-cap.png';
                     Skład: 100% bawełna z certyfikatem  Oeko-Tex
                 </fragment>
             </Product>
-            <Product image={Product3} alt="Okładka książki „Wymieranie internetu” i czapka „Eat the sun”" buyLink="https://buy.stripe.com/cN23g1bHf70B6bu002" price="133 zł">
+            <Product image={Product3} alt="Okładka książki „Wymieranie internetu” i czapka „Eat the sun”" buyLink="https://buy.stripe.com/cN23g1bHf70B6bu002" price="133 zł">
                 <fragment slot="title">Książka + Czapka z daszkiem</fragment>
                 <fragment slot="description">W zestawie taniej</fragment>
             </Product>

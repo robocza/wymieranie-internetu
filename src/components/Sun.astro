@@ -1,0 +1,17 @@
+---
+import {Image} from 'astro:assets';
+import SunImage from '../assets/icons/sun.png';
+
+interface Props {
+    className?: string;
+}
+
+const {
+    className = "h-3 w-3 sm:h-4 sm:w-4 lg:h-8 lg:w-8 sm:mr-1 hidden dark:inline-block align-middle",
+} = Astro.props;
+
+---
+
+<Image src={SunImage}
+       alt="Sun"
+       class={className}/>

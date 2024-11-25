@@ -1,0 +1,13 @@
+---
+import {Image} from 'astro:assets';
+import MoonImage from '../assets/icons/moon.png';
+
+const {
+    className = "h-3 w-3 sm:h-4 sm:w-4 lg:h-8 lg:w-8 sm:mr-1 inline-block dark:hidden align-middle",
+} = Astro.props;
+
+---
+
+<Image src={MoonImage}
+       alt="Moon"
+       class={className}/>

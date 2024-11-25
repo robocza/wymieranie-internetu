@@ -41,7 +41,7 @@ import ThemeSelect from "./ThemeSelect.astro";
             </div>
             <div class="flex items-center justify-center sm:gap-x-2 lg:gap-x-8">
                 {
-                    Astro.url.pathname === '/' && (
+                    (Astro.url.pathname === '/' || Astro.url.pathname.startsWith('/kolofon')) && (
                         <ThemeSelect/>
                     )
                 }
@@ -60,7 +60,7 @@ import ThemeSelect from "./ThemeSelect.astro";
                     )
                 }
                 {
-                    Astro.url.pathname !== '/' && !Astro.url.pathname.startsWith('/dziekujemy') && (
+                    Astro.url.pathname !== '/' && !Astro.url.pathname.startsWith('/dziekujemy') && !Astro.url.pathname.startsWith('/kolofon') && (
                         <ThemeSelect/>
                     )
                 }

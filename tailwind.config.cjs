@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'fade-in': 'fadeIn 60s ease-in-out forwards',
-        'fade-out': 'fadeOut 60s ease-in-out forwards'
+        'fade-in': 'fadeIn 120s ease-in-out forwards',
+        'fade-out': 'fadeOut 120s ease-in-out forwards'
       },
       backgroundImage: {
         chain: "url('/assets/chain.png')",
